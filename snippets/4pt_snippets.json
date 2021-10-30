@@ -1,0 +1,108 @@
+{
+	"box": {
+		"prefix": "box",
+		"body": [
+			"box"
+		],
+		"description": "box"
+	},
+	"axis-x": {
+		"prefix": "axis-x",
+		"body": [
+			"m:axis-x"
+		],
+		"description": "mod m:axis-x"
+	},
+	"axis-x bp": {
+		"prefix": "axis-x bp",
+		"body": [
+			"m:axis-x@${1|sm,md,lg,xl|}"
+		],
+		"description": "mod m:axis-x breakpoint"
+	},
+	"axis-y": {
+		"prefix": "axis-y",
+		"body": [
+			"m:axis-y"
+		],
+		"description": "mod m:axis-y"
+	},
+	"axis-y bp": {
+		"prefix": "axis-y bp",
+		"body": [
+			"m:axis-y@${1|sm,md,lg,xl|}"
+		],
+		"description": "mod m:axis-y breakpoint"
+	},
+	"show": {
+		"prefix": "show",
+		"body": [
+			"m:show"
+		],
+		"description": "mod m:show"
+	},
+	"show bp": {
+		"prefix": "show bp",
+		"body": [
+			"m:show@${1|sm,md,lg,xl|}"
+		],
+		"description": "mod m:show breakpoint"
+	},
+	"hide": {
+		"prefix": "hide",
+		"body": [
+			"m:hide"
+		],
+		"description": "mod m:hide"
+	},
+	"hide bp": {
+		"prefix": "hide bp",
+		"body": [
+			"m:hide@${1|sm,md,lg,xl|}"
+		],
+		"description": "mod m:hide breakpoint"
+	},
+	"inline": {
+		"prefix": "inline",
+		"body": [
+			"m:inline"
+		],
+		"description": "mod m:inline"
+	},
+	"inline bp": {
+		"prefix": "inline bp",
+		"body": [
+			"m:inline@${1|sm,md,lg,xl|}"
+		],
+		"description": "mod m:inline breakpoint"
+	},
+
+	"block": {
+		"prefix": "block",
+		"body": [
+			"m:block"
+		],
+		"description": "mod m:block"
+	},
+	"block bp": {
+		"prefix": "block bp",
+		"body": [
+			"m:block@${1|sm,md,lg,xl|}"
+		],
+		"description": "mod m:block breakpoint"
+	},
+	"text-align": {
+		"prefix": "text-align",
+		"body": [
+			"t:${1|center,left,right|}"
+		],
+		"description": "mod t:center,left,right"
+	},
+	"text-align bp": {
+		"prefix": "text-align bp",
+		"body": [
+			"t:${1|center,left,right|}@${2|sm,md,lg,xl|}"
+		],
+		"description": "mod t:center,left,right breakpoint"
+	}
+}
