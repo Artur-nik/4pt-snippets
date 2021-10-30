@@ -2,7 +2,8 @@
 	"name": "4pt-snippets",
 	"displayName": "4pt snippets",
 	"description": "4pt snippets",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"publisher": "4pt-snippets",
 	"engines": {
 		"vscode": "^0.10.1"
 	},

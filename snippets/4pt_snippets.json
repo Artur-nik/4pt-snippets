@@ -104,5 +104,19 @@
 			"t:${1|center,left,right|}@${2|sm,md,lg,xl|}"
 		],
 		"description": "mod t:center,left,right breakpoint"
+	},
+	"align-items": {
+		"prefix": "align-items",
+		"body": [
+			"m:align-${1|left,right,top,bottom,center,center-x,center-y|}"
+		],
+		"description": "mod m:align-items"
+	},
+	"align-items bp": {
+		"prefix": "align-items bp",
+		"body": [
+			"m:align-${1|left,right,top,bottom,center,center-x,center-y|}@${2|sm,md,lg,xl|}"
+		],
+		"description": "mod m:align-items breakpoint"
 	}
 }
