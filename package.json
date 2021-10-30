@@ -1,9 +1,9 @@
 {
 	"name": "4pt-snippets",
-	"displayName": "4pt snippets",
+	"displayName": "Artur Nik",
 	"description": "4pt snippets",
-	"version": "0.0.4",
-	"publisher": "4pt-snippets",
+	"version": "0.0.5",
+	"publisher": "4pt snippets for Visual Studio Code",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
