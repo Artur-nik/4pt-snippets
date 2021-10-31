@@ -2,121 +2,132 @@
 	"box": {
 		"prefix": "box",
 		"body": [
-			"box"
+			"<div class=\"box $1\">$2</div>"
 		],
 		"description": "box"
 	},
-	"axis-x": {
-		"prefix": "axis-x",
+	"item": {
+		"prefix": "item",
 		"body": [
-			"m:axis-x"
+		  	"<div class=\"item $1\">$2</div>"
 		],
-		"description": "mod m:axis-x"
+		"description": ""
 	},
-	"axis-x bp": {
-		"prefix": "axis-x bp",
+	"axis-x": {
+		"prefix":["axis-x", "m-axis-x"],
 		"body": [
-			"m:axis-x@${1|sm,md,lg,xl|}"
+			"m:axis-x${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:axis-x breakpoint"
+		"description": "modifier: m:axis-x breakpoints"
 	},
 	"axis-y": {
-		"prefix": "axis-y",
+		"prefix": ["axis-y", "m-axis-y"],
 		"body": [
-			"m:axis-y"
+			"m:axis-y${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:axis-y"
+		"description": "modifier: m:axis-y breakpoints"
 	},
-	"axis-y bp": {
-		"prefix": "axis-y bp",
+	"axis-x-r": {
+		"prefix":["axis-x-r", "m-axis-x-r"],
 		"body": [
-			"m:axis-y@${1|sm,md,lg,xl|}"
+			"m:axis-x-r${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:axis-y breakpoint"
+		"description": "modifier: m:axis-x-r breakpoints"
+	},
+	"axis-y-r": {
+		"prefix": ["y-r","axis-y-r", "m-axis-y-r"],
+		"body": [
+			"m:axis-y-r${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "modifier: m:axis-y-r breakpoints"
 	},
 	"show": {
-		"prefix": "show",
+		"prefix": ["show", "m-show"],
 		"body": [
-			"m:show"
+			"m:show@${2|sm,md,lg,xl|}"
 		],
-		"description": "mod m:show"
-	},
-	"show bp": {
-		"prefix": "show bp",
-		"body": [
-			"m:show@${1|sm,md,lg,xl|}"
-		],
-		"description": "mod m:show breakpoint"
+		"description": "modifier: m:show breakpoints"
 	},
 	"hide": {
-		"prefix": "hide",
+		"prefix": ["hide", "m-hide"],
 		"body": [
-			"m:hide"
+			"m:hide${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:hide"
-	},
-	"hide bp": {
-		"prefix": "hide bp",
-		"body": [
-			"m:hide@${1|sm,md,lg,xl|}"
-		],
-		"description": "mod m:hide breakpoint"
+		"description": "modifier: m:hide breakpoints"
 	},
 	"inline": {
-		"prefix": "inline",
+		"prefix": ["inline", "m-inline"],
 		"body": [
-			"m:inline"
+			"m:inline${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:inline"
+		"description": "modifier: m:inline and breakpoints"
 	},
-	"inline bp": {
-		"prefix": "inline bp",
-		"body": [
-			"m:inline@${1|sm,md,lg,xl|}"
-		],
-		"description": "mod m:inline breakpoint"
-	},
-
 	"block": {
-		"prefix": "block",
+		"prefix":["block", "m-block"],
 		"body": [
-			"m:block"
+			"m:block${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:block"
-	},
-	"block bp": {
-		"prefix": "block bp",
-		"body": [
-			"m:block@${1|sm,md,lg,xl|}"
-		],
-		"description": "mod m:block breakpoint"
-	},
-	"text-align": {
-		"prefix": "text-align",
-		"body": [
-			"t:${1|center,left,right|}"
-		],
-		"description": "mod t:center,left,right"
-	},
-	"text-align bp": {
-		"prefix": "text-align bp",
-		"body": [
-			"t:${1|center,left,right|}@${2|sm,md,lg,xl|}"
-		],
-		"description": "mod t:center,left,right breakpoint"
+		"description": "modifier: m:block and breakpoints"
 	},
 	"align-items": {
-		"prefix": "align-items",
+		"prefix": ["align-items", "m-align-items"],
 		"body": [
-			"m:align-${1|left,right,top,bottom,center,center-x,center-y|}"
+			"m:align-${1|left,right,top,bottom,center,center-x,center-y|}${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:align-items"
+		"description": "modifier: m:align-items {left,right,top,bottom,center,center-x,center-y} and breakpoints"
 	},
-	"align-items bp": {
-		"prefix": "align-items bp",
+
+	"text-align": { 
+		"prefix": ["text-align", "t-align"],
 		"body": [
-			"m:align-${1|left,right,top,bottom,center,center-x,center-y|}@${2|sm,md,lg,xl|}"
+			"t:${1|center,left,right|}${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "mod m:align-items breakpoint"
+		"description": "typography: t:center,left,right and breakpoints"
+	},
+	"text-weight": { 
+		"prefix": ["text-weight", "t-weight"],
+		"body": [
+			"t:${1|900,800,700,600,500,400,300,200,100|}"
+		],
+		"description": "typography: t:900,800,700,600,500,400,300,200,100"
+	},
+	"grid": {
+		"prefix": "grid",
+		"body": [
+		  "<div class=\"grid\">",
+		  "    <div class=\"\"></div>",
+		  "    <div class=\"\"></div>",
+		  "    <div class=\"\"></div>",
+		  "</div> "
+		],
+		"description": "grid-sistem"
+	},
+	"grid-col": { 
+		"prefix": ["col", "g-col"],
+		"body": [
+			"col-${1|1,2,3,4,5,6,7,8,9,10,11,12|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem col and breakpointss"
+	},
+	"grid-row": { 
+		"prefix": "row",
+		"body": [
+			"row-${1|1,2,3,4,5,6,7,8,9,10,11,12|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem row and breakpointss"
+	},
+	"grid-col-start": { 
+		"prefix": ["col-start", "g-col-start"],
+		"body": [
+			"g:cs-${1|1,2,3,4,5,6,7,8,9,10,11|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem col-start and breakpointss"
+	},
+	"grid-row-start": { 
+		"prefix": ["row-start", "g-row-start"],
+		"body": [
+			"rs-${1|1,2,3,4,5,6,7,8,9,10,11|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem row-start and breakpointss"
 	}
 }

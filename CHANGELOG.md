@@ -1,9 +1,6 @@
-# Change Log
-
-All notable changes to the "4pt" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
 
-- Initial release
+# 0.0.7 (31.10.2021)
+    - global snippets
+    - grid snippets
+    - typography snippets

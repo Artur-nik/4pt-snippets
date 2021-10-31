@@ -2,13 +2,24 @@
 
 #### box prefix:
 1. box
+2. item
 
-#### modifications prefix:
-1. axis-x / axis-x bp
-2. axis-y / axis-y bp
-3. show / show bp
-4. hide / hide bp
-5. inline/ inline bp
-6. block / block bp
-7. text-align / text-align bp
-8. align-items / align-items bp
+#### modifiers prefix:
+1. axis-x 
+2. axis-y 
+3. show 
+4. hide 
+5. inline
+6. block 
+7. align-item
+
+#### typography prefix:
+1. text-align
+2. text-weight
+
+#### grid prefix:
+1. grid
+2. col
+3. row
+4. col-start
+5. row-start
