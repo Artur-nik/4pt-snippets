@@ -2,7 +2,7 @@
 	"name": "4pt-snippets",
 	"displayName": "4pt-snippets",
 	"description": "4pt snippets for Visual Studio Code",
-	"version": "0.0.7",
+	"version": "0.2.0",
 	"publisher": "4pt-snippets",
 	"engines": {
 		"vscode": "^0.10.1"
@@ -23,6 +23,10 @@
 			},
 			{
 				"language": "php",
+				"path": "./snippets/4pt_snippets.json"
+			},
+			{
+				"language": "nunjucks",
 				"path": "./snippets/4pt_snippets.json"
 			}
 		]

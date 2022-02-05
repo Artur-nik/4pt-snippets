@@ -1,25 +1,44 @@
 ## 4pt snippets for Visual Studio Code
 
 #### box prefix:
-1. box
-2. item
+* box
+* item
 
 #### modifiers prefix:
-1. axis-x 
-2. axis-y 
-3. show 
-4. hide 
-5. inline
-6. block 
-7. align-item
+* axis-x , m-axis-x 
+* axis-y , m-axis-y 
+* show , m-show 
+* hide , m-hide 
+* inline, m-inline
+* block , m-block 
+* align, m-align
+* align-0, m-align-0
+* align-item, m-align-item
+* position, m-position
+* rotate, m-rotate
 
 #### typography prefix:
-1. text-align
-2. text-weight
+* text-align, t-align
+* text-weight, t-weight
+* text-uppercase, t-uppercase
+* text-transform-none, t-transform-none
 
 #### grid prefix:
-1. grid
-2. col
-3. row
-4. col-start
-5. row-start
+* grid 
+* col, g-col
+* row, g-row
+* col-start, g-col-start
+* row-start, g-row-start
+* col-auto, g-col-auto
+* rows-auto, g-rows-auto
+* rows-fixed, g-rows-fixed
+* gap, g-gap
+* gap-0, g-gap-0
+* gap-n, g-gap-n
+* gap-n-0, g-gap-n-0
+* gap-x, g-gap-x
+* gap-x-0, g-gap-x-0
+* gap-y, g-gap-y
+* gap-y-0, g-gap-y-0
+* columns, g-columns
+* start-auto, g-start-auto

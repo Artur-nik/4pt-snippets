@@ -13,6 +13,20 @@
 		],
 		"description": ""
 	},
+	"position": {
+		"prefix":["position", "m-position"],
+		"body": [
+			"m:${0|relative,static|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "modifier: m:position breakpoints"
+	},
+	"rotate": {
+		"prefix":["rotate", "m-rotate"],
+		"body": [
+			"m:rotate-${1|0,45,90,135,180,225,270,315|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "modifier: m:rotate breakpoints"
+	},
 	"axis-x": {
 		"prefix":["axis-x", "m-axis-x"],
 		"body": [
@@ -72,11 +86,24 @@
 	"align-items": {
 		"prefix": ["align-items", "m-align-items"],
 		"body": [
-			"m:align-${1|left,right,top,bottom,center,center-x,center-y|}${2| ,@sm,@md,@lg,@xl|}"
+			"m:align-${1|left,right,top,bottom,center,center-x,center-y,stretch,stretch-y,stretch-x|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "modifier: m:align-items {left,right,top,bottom,center,center-x,center-y,stretch,stretch-y,stretch-x} and breakpoints"
+	},
+	"align": {
+		"prefix": ["align", "m-align"],
+		"body": [
+			"m:${1|left,right,top,bottom,center,center-x,center-y|}${2| ,@sm,@md,@lg,@xl|}"
 		],
 		"description": "modifier: m:align-items {left,right,top,bottom,center,center-x,center-y} and breakpoints"
 	},
-
+	"align-0": {
+		"prefix": ["align-0", "m-align-0"],
+		"body": [
+			"m:${1|left,right,top,bottom,center,center-x,center-y|}-0${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "modifier: m:align-items {left,right,top,bottom,center,center-x,center-y} and breakpoints"
+	},
 	"text-align": { 
 		"prefix": ["text-align", "t-align"],
 		"body": [
@@ -91,6 +118,35 @@
 		],
 		"description": "typography: t:900,800,700,600,500,400,300,200,100"
 	},
+	"text-italic": { 
+		"prefix": ["text-italic", "t-italic"],
+		"body": [
+			"t:italic"
+		],
+		"description": "typography: t:italic"
+	},
+	"text-no-italic": { 
+		"prefix": ["text-no-italic", "t-no-italic"],
+		"body": [
+			"t:no-italic"
+		],
+		"description": "typography: t:no-italic"
+	},
+	"text-transform-uppercase": { 
+		"prefix": ["text-uppercase", "t-uppercase"],
+		"body": [
+			"t:uppercase"
+		],
+		"description": "typography: t:uppercase"
+	},
+	"text-transform-none": { 
+		"prefix": ["text-transform-none", "t-transform-none"],
+		"body": [
+			"t:transform-none"
+		],
+		"description": "typography: t:transform-none"
+	},
+
 	"grid": {
 		"prefix": "grid",
 		"body": [
@@ -102,32 +158,137 @@
 		],
 		"description": "grid-sistem"
 	},
+	"order": { 
+		"prefix": ["order", "g-order"],
+		"body": [
+			"g:rs-${1|0,1,2,3,4,5,6,7,8,9,10,11,12|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem order and breakpoints"
+	},
 	"grid-col": { 
 		"prefix": ["col", "g-col"],
 		"body": [
 			"col-${1|1,2,3,4,5,6,7,8,9,10,11,12|}${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "grid-sistem col and breakpointss"
+		"description": "grid-sistem col and breakpoints"
 	},
 	"grid-row": { 
-		"prefix": "row",
+		"prefix": ["row", "g-row"],
 		"body": [
 			"row-${1|1,2,3,4,5,6,7,8,9,10,11,12|}${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "grid-sistem row and breakpointss"
+		"description": "grid-sistem row and breakpoints"
 	},
 	"grid-col-start": { 
 		"prefix": ["col-start", "g-col-start"],
 		"body": [
-			"g:cs-${1|1,2,3,4,5,6,7,8,9,10,11|}${2| ,@sm,@md,@lg,@xl|}"
+			"g:cs-${1|1,2,3,4,5,6,7,8,9,10,11,12,auto|}${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "grid-sistem col-start and breakpointss"
+		"description": "grid-sistem mod col-start and breakpoints"
 	},
 	"grid-row-start": { 
 		"prefix": ["row-start", "g-row-start"],
 		"body": [
-			"rs-${1|1,2,3,4,5,6,7,8,9,10,11|}${2| ,@sm,@md,@lg,@xl|}"
+			"g:rs-${1|1,2,3,4,5,6,7,8,9,10,11,12,auto|}${2| ,@sm,@md,@lg,@xl|}"
 		],
-		"description": "grid-sistem row-start and breakpointss"
+		"description": "grid-sistem mod row-start and breakpoints"
+	},
+	"grid-col-auto": { 
+		"prefix": ["col-auto", "g-col-auto"],
+		"body": [
+			"g:col-auto${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod col-auto and breakpoints"
+	},
+	"grid-col-auto-none": { 
+		"prefix": ["col-auto-none", "g-col-auto-none"],
+		"body": [
+			"g:col-auto-none${1|@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod col-auto-none and breakpoints"
+	},
+	"grid-start-auto": { 
+		"prefix": ["start-auto", "g-start-auto"],
+		"body": [
+			"g:start-auto${1|@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod start-auto and breakpoints"
+	},
+	"grid-columns": { 
+		"prefix": ["columns", "g-columns"],
+		"body": [
+			"g:columns-${1|2,3,4,5,6,7,8,9,10,12|}${2| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod columns and breakpoints"
+	},
+	"grid-gap": { 
+		"prefix": ["gap", "g-gap"],
+		"body": [
+			"g:gap${1|@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap and breakpoints"
+	},
+	"grid-gap-0": { 
+		"prefix": ["gap-0", "g-gap-0"],
+		"body": [
+			"g:gap-0${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-0 and breakpoints"
+	},
+	"grid-gap-n": { 
+		"prefix": ["gap-n", "g-gap-n"],
+		"body": [
+			"g:gap-n${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-n and breakpoints"
+	},
+	"grid-gap-n-0": { 
+		"prefix": ["gap-n-0", "g-gap-n-0"],
+		"body": [
+			"g:gap-n-0${1|@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-n-0 and breakpoints"
+	},
+	"grid-gap-x": { 
+		"prefix": ["gap-x", "g-gap-x"],
+		"body": [
+			"g:gap-x${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-x and breakpoints"
+	},
+	"grid-gap-x-0": { 
+		"prefix": ["gap-x-0", "g-gap-x-0"],
+		"body": [
+			"g:gap-x-0${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-x-0 and breakpoints"
+	},
+	"grid-gap-y": { 
+		"prefix": ["gap-y", "g-gap-y"],
+		"body": [
+			"g:gap-y${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-y and breakpoints"
+	},
+	"grid-gap-y-0": { 
+		"prefix": ["gap-y-0", "g-gap-y-0"],
+		"body": [
+			"g:gap-y-0${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod gap-y-0 and breakpoints"
+	},
+	"grid-rows-auto": { 
+		"prefix": ["rows-auto", "g-rows-auto"],
+		"body": [
+			"g:rows-auto${1|@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod rows-auto and breakpoints"
+	},
+	"grid-rows-fixed": { 
+		"prefix": ["rows-fixed", "g-rows-fixed"],
+		"body": [
+			"g:rows-fixed${1| ,@sm,@md,@lg,@xl|}"
+		],
+		"description": "grid-sistem mod rows-fixed and breakpoints"
 	}
 }
